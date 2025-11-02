@@ -1,0 +1,106 @@
+:root {
+    --bg-color: #f4f4f9;
+    --card-color: #ffffff;
+    --text-color: #333;
+    --primary-color: #6200ea;
+    --completed-color: #999;
+  }
+  
+  body.dark {
+    --bg-color: #1e1e2f;
+    --card-color: #2e2e3e;
+    --text-color: #eee;
+    --primary-color: #bb86fc;
+    --completed-color: #555;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container {
+    width: 400px;
+    margin-top: 50px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+  }
+  
+  .input-group {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  
+  input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px 0 0 6px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  
+  button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 0 6px 6px 0;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background-color: #3700b3;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: var(--card-color);
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  li:hover {
+    transform: translateY(-2px);
+  }
+  
+  li.completed {
+    text-decoration: line-through;
+    color: var(--completed-color);
+  }
+  
+  li button {
+    background: none;
+    border: none;
+    color: #ff1744;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
